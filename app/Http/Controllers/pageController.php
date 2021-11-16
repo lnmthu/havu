@@ -271,36 +271,7 @@ class pageController extends Controller
         $data['weight']=0;
         $data['options']['img']=$prod->img;
         Cart::add($data);
-
-
-                // <div class='cart'>
-        $d="
-                   <div class='beta-select'><i class='fa fa-shopping-cart'></i>Giỏ hàng (".Cart::count()." Bánh)</div>";
-        //                     <div class='cart-body' >";
-        //                         foreach(Cart::content() as $c)
-        //                         {
-        //                             $d.="<div class='beta-dropdown cart-item'>
-        //                                         <div class='media'>
-        //                                             <a class='pull-left' href='detailproduct/".$c->id."'><img src='image/product/".$c->options->img."' alt=''></a>
-        //                                             <div class='media-body'>
-        //                                                 <span class='cart-item-title'>".$c->name."</span>
-        //                                                 <span class='cart-item-amount'>.".$c->qty."*<span>".$c->price."</span></span>
-        //                                             </div>
-        //                                         </div>
-        //                                      </div>";
-        //                         }
-        // $d.="
-        //                         <div class='cart-caption'>
-        //                             <div class='cart-total text-right'>Tổng tiền: <span class='cart-total-value'>".Cart::priceTotal(0)." VND</span></div>
-        //                             <div class='clearfix'></div>
-
-        //                             <div class='center'>
-        //                                 <div class='space10'>&nbsp;</div>
-        //                                 <a href='shoppingCart' class='beta-btn primary text-center'>Đặt hàng <i class='fa fa-chevron-right'></i></a>
-        //                             </div>
-        //                         </div>
-        //                     </div>
-        //         </div>";
+        $d="<div class='beta-select'><i class='fa fa-shopping-cart'></i>Giỏ hàng (".Cart::count()." Bánh)</div>";
             if(Cart::count()>0)
             {
                 foreach (Cart::content() as  $c) {
