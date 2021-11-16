@@ -45,7 +45,7 @@
                                 @endforeach
                             </div>
                         @endif
-                        <form role="form" action="admin/login" method="POST">
+                        <form role="form" action="login" method="POST">
                             <fieldset>
                             	<input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="form-group">

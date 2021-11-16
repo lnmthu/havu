@@ -22,7 +22,7 @@
                                 {{session("thongbao")}}<br>
                             </div>
                         @endif
-                        <form action="admin/users/edit/{{$user->id}}" method="POST">
+                        <form action="users/edit/{{$user->id}}" method="POST">
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                              <fieldset>
                                 <legend>Phần bắt buộc</legend>
@@ -65,43 +65,7 @@
                                 <input disabled="" class="form-control option" name="phone_number" placeholder="Nhập số diện thoại" value="{{$user->phone_number}}" data-validation="number"  data-validation-error-msg="Làm ơn số điện thoại" />
                             </div>
                             <?php $district=null;$ward=null;?>
-                      <div class="form-block">
-                                <label>Tỉnh/Thành phố</label>
-                                <select disabled="" data-validation="required"  data-validation-error-msg="Làm ơn chọn tỉnh thành phố" name="id_city" id="city" class="form-control choose option">
-                                        <option value=""> - - Chọn tỉnh thành phố - - </option>
-                                    @foreach($city as $c)
-                                        <option  @if($user->id_city==$c->id)
-                                                        {{"selected"}}
-                                                        <?php $district=$c->district; ?>
-                                                 @endif
-                                                       value="{{$c->id}}">{{$c->name}}</option>
-                                    @endforeach
-                                </select>
-                        </div>
-                        <div class="form-block">
-                            <label>Quận/Huyện</label>
-                            <select disabled="" data-validation="required"  data-validation-error-msg="Làm ơn chọn quận huyện"  name="id_district" id="district" class="form-control choose option">
-                                <option value=""> - - Chọn quận huyện - - </option>
-                                @if($district)
-                                  @foreach($district as $d)
-                                        <option @if($user->id_district==$d->id)
-                                        <?php $ward=$d->ward; ?> {{"selected"}} @endif value="{{$d->id}}">{{$d->name}}</option>
-                                   @endforeach
-                               @endif
-                            </select>
-                        </div>
-                        <div class="form-block">
-                            <label>Phường/Xã/Thị trấn</label>
-                            <select disabled=""  data-validation="required"  data-validation-error-msg="Làm ơn chọn xá phường thị trấn" name="id_ward" id="ward" class="form-control option">
-                                <option  value=""> - - Chọn xã phường thị trận - - </option>
-                            @if($ward)
-                                @foreach($ward as $w)
-                                    <option
-                                @if($user->id_ward==$w->id) {{"selected"}} @endif value="{{$w->id}}">{{$w->name}}</option>
-                               @endforeach
-                            @endif
-                            </select>
-                        </div>
+                     
                             <div class="form-group">
                                 <label>Địa chỉ</label>
                                 <input disabled="" class="form-control option" name="address" placeholder="Nhập địa chỉ" value="{{$user->address}}" data-validation="required"  data-validation-error-msg="Làm ơn nhập địa chỉ"

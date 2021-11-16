@@ -28,9 +28,7 @@
                                 <th>Email</th>
                                 <th>Giới tính</th>
                                 <th>Số điện thoại</th>
-                                <th>Tỉnh/Thành phố</th>
-                                <th>Quận/Huyện</th>
-                                <th>Xã/Phường/Thị trấn</th>
+
                                 <th>Địa chỉ</th>
                                 <th>Xóa</th>
                                 <th>Sửa</th>
@@ -57,18 +55,12 @@
                                     <td></td>
                                 @endif
                                 <td>{{$u->phone_number}}</td>
-                                @if($u->city&&$u->district&&$u->ward)
-                                <td>{{$u->city->name}}</td>
-                                <td>{{$u->district->name}}</td>
-                                <td>{{$u->ward->name}}</td>
-                                @else
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                @endif
                                 <td>{{$u->address}}</td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/users/delete/{{$u->id}}">Xóa</a></td>
-                                <td class="center"><a href="admin/users/edit/{{$u->id}}"><i class="fa fa-pencil fa-fw"></i></a></td>
+                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="users/delete/{{$u->id}}">Xóa</a></td>
+                                <td class="center"><a href="users/edit/{{$u->id}}"><i class="fa fa-pencil fa-fw"></i></a></td>
                             </tr>
                             @endforeach
 

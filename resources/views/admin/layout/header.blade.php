@@ -22,7 +22,7 @@
                       <!--  <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a> -->
                         </li>
                         <li class="divider"></li>
-                        <li><a href="admin/logout"><i class="fa fa-sign-out fa-fw"></i>Đăng xuất</a>
+                        <li><a href="logout"><i class="fa fa-sign-out fa-fw"></i>Đăng xuất</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->

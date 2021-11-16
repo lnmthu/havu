@@ -27,7 +27,7 @@
                     			{{session("loi")}}<br>
                     		</div>
                     	@endif
-                       <form action="admin/users/add" method="POST">
+                       <form action="users/add" method="POST">
                         	 <input type="hidden" name="_token" value="{{csrf_token()}}">
                             <fieldset>
                                 <legend>Phần bắt buộc</legend>
@@ -65,28 +65,7 @@
                                     <label>Số diện thoại</label>
                                     <input disabled="" class="form-control option" name="phone_number" placeholder="Nhập số diện thoại" data-validation="number"  data-validation-error-msg="Làm ơn nhập số điện thoại"/>
                                 </div>
-                                 <div class="form-block">
-                                    <label>Tỉnh/Thành phố</label>
-                                    <select data-validation="required"  data-validation-error-msg="Làm ơn chọn tỉnh thành phố" disabled="" name="id_city" id="city" class="form-control choose option">
-                                            <option value=""> - - Chọn tỉnh thành phố - - </option>
-                                        @foreach($city as $c)
-                                                       <option value="{{$c->id}}">{{$c->name}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="form-block">
-                                    <label>Quận/Huyện</label>
-                                    <select data-validation="required"  data-validation-error-msg="Làm ơn chọn quận huyện" disabled="" name="id_district" id="district" class="form-control choose option">
-                                        <option value=""> - - Chọn quận huyện - - </option>
-                                    </select>
-                                </div>
-                                <div class="form-block">
-                                    <label>Phường/Xã/Thị trấn</label>
-                                    <select disabled="" name="id_ward" id="ward" class="form-control option" data-validation="required"  data-validation-error-msg="Làm ơn chọn xá phường thị trấn">
-                                        <option value=""> - - Chọn xã phường thị trận - - </option>
-
-                                    </select>
-                                </div>
+                                
                                     <div class="form-group">
                                         <label>Địa chỉ</label>
                                         <input disabled="" class="form-control option" name="address" placeholder="Nhập địa chỉ" data-validation="required"  data-validation-error-msg="Làm ơn nhập địa chi"/>

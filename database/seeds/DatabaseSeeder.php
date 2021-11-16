@@ -12,6 +12,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         DB::unprepared(file_get_contents('database/seeds/sell_cake_db.sql'));
-    //        $this->call(UsersTableSeeder::class);
+        // $this->call(CreateTableDashboard::class);
     }
 }
