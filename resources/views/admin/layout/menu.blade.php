@@ -13,7 +13,7 @@
                             <!-- /input-group -->
                         </li>
                             <li>
-                            <a href="statistical"><i class="fa fa-users fa-fw"></i>Thống kê</a>
+                            <a href="statistic"><i class="fa fa-users fa-fw"></i>Thống kê</a>
 
                             <!-- /.nav-second-level -->
                         </li>

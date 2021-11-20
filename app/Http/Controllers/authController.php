@@ -15,7 +15,7 @@ class authController extends Controller
     {
        // $data = $r->validate(['g-recaptcha-response' => new Captcha(),]);
     	if(Auth::attempt(["email"=>$r->email,"password"=>$r->password]))// && $data)
-    		return redirect("users/list");
+    		return redirect("statistic");
     	else
     		return redirect("")->with("thongbao","E-mail hoặc Password không chính xác");
     }

@@ -26,9 +26,9 @@ route::group(["prefix"=>"","middleware"=>"authMiddle"],function(){
 		route::post("edit/{id}","usersController@postEdit");
 		route::get("delete/{id}","usersController@getDelete");
 	});
-	route::group(["prefix"=>"statistical"],function(){
-		route::get("","statisticalController@getStatistical");
-        route::post("","statisticalController@postStatistical");
+	route::group(["prefix"=>""],function(){
+		route::get("statistic","statisticalController@getStatistical");
+        route::post("api/statistic","statisticalController@postStatistical");
 
 	});
 });

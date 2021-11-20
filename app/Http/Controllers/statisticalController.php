@@ -14,8 +14,8 @@ class statisticalController extends Controller
     }
     public function postStatistical(Request $request){
     	$data= $request->all();
+        return $data;
 
-    	return view("admin.statistical.sales")->with(compact("dashboard"));
     }
 
 
